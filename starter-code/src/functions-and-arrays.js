@@ -21,15 +21,25 @@ var words = [
 ];
 
 function findLongestWord (arrayOfWords) {
- for (let i = 0; i < arrayOfWords.length; i++) {
-   let word = arrayOfWords[i].length;
-  return word;
+ var wordsArray = [""];
+
+ for (var i = 0; i < arrayOfWords.length; i++) {
+  var wordsRank = arrayOfWords[i].length + " " + arrayOfWords[i];
+
+  if (arrayOfWords[i].length )
+
+  console.log(wordsRank);
+
  }
 }
 
 // Calculating a Sum
 
 var numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+console.log(numbers.reduce(reducer));
+
 
 // Calculate the Average
 
