@@ -7,7 +7,7 @@ function maxOfTwoNumbers(num1, num2) {
   }
 }
 
-console.log(maxOfTwoNumbers(21,29));
+console.log(maxOfTwoNumbers(21,29) + "  is the largest number");
 
 // Finding Longest Word
 var words = [
@@ -25,11 +25,8 @@ function findLongestWord (arrayOfWords) {
 
  for (var i = 0; i < arrayOfWords.length; i++) {
   var wordsRank = arrayOfWords[i].length + " " + arrayOfWords[i];
-
   if (arrayOfWords[i].length )
-
-  console.log(wordsRank);
-
+  console.log(wordsRank );
  }
 }
 
@@ -37,13 +34,25 @@ function findLongestWord (arrayOfWords) {
 
 var numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-const reducer = (accumulator, currentValue) => accumulator + currentValue;
-console.log(numbers.reduce(reducer));
+// just so I can see the differenve between ES5 and 6.
+function reducer2 (accumulator, currentValue) {
+  return accumulator + currentValue;
+}
 
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+console.log(numbers.reduce(reducer2)  + "  is the sum of all the numbers");
 
 // Calculate the Average
+// I dont really understand reduce, but i works:P
 
 var numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+
+const average = numbersAvg => numbersAvg.reduce( ( p, c ) => p + c, 0 ) / numbersAvg.length;
+    
+const result = average(numbersAvg);
+    
+console.log(result  + " is the average of all the  numbers");
 
 // Array of Strings
 var wordsArr = [
@@ -58,6 +67,21 @@ var wordsArr = [
   'fuel',
   'palace'
 ];
+
+function averageWordLength (array) {
+  var sum = 0;
+  array.forEach(function(element) {
+    console.log(element.length + " " + element);
+    
+    for (var i = 0; i < element.length; i++){
+     sum = element.length;
+     console.log('Your sum is ' + sum);
+    }
+    
+  });
+}
+
+console.log(averageWordLength(wordsArr));
 
 // Unique Arrays
 var wordsUnique = [
@@ -100,6 +124,7 @@ var wordsCount = [
   'disobedience',
   'matter'
 ];
+
 // Bonus Quest
 
 var matrix = [
