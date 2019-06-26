@@ -95,11 +95,13 @@ var wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray(array, findword) {
-  console.log(array.indexOf(findword));
+
+function uniquifyArray (array, word) { 
+  console.log("The index of " + word.toUpperCase() +  " is "  + array.indexOf(word));
 }
 
-uniquifyArray(wordsUnique, "playground");
+uniquifyArray(wordsUnique, "crab");
+
 
 // Finding Elements
 var wordsFind = [
@@ -112,6 +114,16 @@ var wordsFind = [
   'truth',
   'disobedience'
 ];
+
+function doesWordExist(array, word) {
+  if(array.includes(word)) {
+    console.log("The array contains " + word.toUpperCase());
+  } else {
+    console.log("The array dont contain " + word.toUpperCase())
+  }
+}
+
+doesWordExist(wordsFind, "machine");
 
 // Counting Repetion
 var wordsCount = [
@@ -127,6 +139,16 @@ var wordsCount = [
   'disobedience',
   'matter'
 ];
+
+function howManyTimes (array, word) {
+  if(array.includes(word)) {
+    console.log("The array contains " + word.toUpperCase());
+  } else {
+    console.log("The array dont contain " + word.toUpperCase())
+  }
+}
+
+howManyTimes(wordsCount, "machine");
 
 // Bonus Quest
 
