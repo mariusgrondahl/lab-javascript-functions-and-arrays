@@ -22,7 +22,7 @@ var words = [
 
 function findLongestWord (wordArr) {
   const result = wordArr.filter(word => word.length > wordArr.length + 1);
-  console.log(result[0].toUpperCase() + " is the longest word of the array" );
+  // console.log(result[0].toUpperCase() + " is the longest word of the array" );
 }
 
 findLongestWord(words);
@@ -43,13 +43,10 @@ console.log(numbers.reduce(reducer2)  + "  is the sum of all the numbers");
 // Calculate the Average
 // I dont really understand reduce, but i works:P
 
-var numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
-
-const average = numbersAvg => numbersAvg.reduce( ( p, c ) => p + c, 0 ) / numbersAvg.length;
-    
-const result = average(numbersAvg);
-    
-console.log(result  + " is the average of all the  numbers");
+  var numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+  const average = numbersAvg => numbersAvg.reduce( ( p, c ) => p + c, 0 ) / numbersAvg.length;
+  const result = average(numbersAvg);
+  console.log(result  + " is the average of all the  numbers");
 
 // Array of Strings
 var wordsArr = [
@@ -113,9 +110,12 @@ var wordsFind = [
 ];
 
 function doesWordExist(array, word) {
-  if(array.includes(word)) {
+  if(array.includes(word) === true ) {
     console.log("The array contains " + word );
-  } 
+  } else  {
+    console.log("The array dont contain " + word );
+  }
+
 }
 
 doesWordExist(wordsFind, "machine");
@@ -136,16 +136,15 @@ var wordsCount = [
 ];
 
 function howManyTimes (array, string) {
+
   let wordcounter = 0;
 
-  for (let j = 0; j < array.length; j++){
-    if(string === true){
-      wordcounter = wordcounter++;
-      console.log(wordcounter)
-    } else{
-      wordcounter = 0;
-    }
+  for (let i = 0; i < array.length; i++){
+    if (array[i] === string) {
+      wordcounter++;
+    } 
   }
+  console.log("The word: " + string.toUpperCase() + " occurs " + wordcounter + " times")
 }
 
 howManyTimes(wordsCount, "matter");
