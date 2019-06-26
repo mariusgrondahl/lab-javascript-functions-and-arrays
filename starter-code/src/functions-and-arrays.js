@@ -20,15 +20,12 @@ var words = [
   'crackpot'
 ];
 
-function findLongestWord (arrayOfWords) {
- var wordsArray = [""];
-
- for (var i = 0; i < arrayOfWords.length; i++) {
-  var wordsRank = arrayOfWords[i].length + " " + arrayOfWords[i];
-  if (arrayOfWords[i].length )
-  console.log(wordsRank );
- }
+function findLongestWord (wordArr) {
+  const result = wordArr.filter(word => word.length > wordArr.length + 1);
+  console.log(result[0].toUpperCase() + " is the longest word of the array" );
 }
+
+findLongestWord(words);
 
 // Calculating a Sum
 
@@ -98,6 +95,12 @@ var wordsUnique = [
   'bring'
 ];
 
+function uniquifyArray(array, findword) {
+  console.log(array.indexOf(findword));
+}
+
+uniquifyArray(wordsUnique, "playground");
+
 // Finding Elements
 var wordsFind = [
   'machine',
@@ -149,3 +152,5 @@ var matrix = [
   [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
+
+
