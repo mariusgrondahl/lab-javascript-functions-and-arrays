@@ -68,11 +68,8 @@ var wordsArr = [
 function averageWordLength (array) {
   var sum = 0;
   array.forEach(function(element) {
-    console.log(element.length + " " + element);
-    
     for (var i = 0; i < element.length; i++){
      sum = element.length;
-     console.log('Your sum is ' + sum);
     }
     
   });
@@ -100,7 +97,7 @@ function uniquifyArray (array, word) {
   console.log("The index of " + word.toUpperCase() +  " is "  + array.indexOf(word));
 }
 
-uniquifyArray(wordsUnique, "crab");
+uniquifyArray(wordsUnique, "poison");
 
 
 // Finding Elements
@@ -117,10 +114,8 @@ var wordsFind = [
 
 function doesWordExist(array, word) {
   if(array.includes(word)) {
-    console.log("The array contains " + word.toUpperCase());
-  } else {
-    console.log("The array dont contain " + word.toUpperCase())
-  }
+    console.log("The array contains " + word );
+  } 
 }
 
 doesWordExist(wordsFind, "machine");
@@ -140,15 +135,20 @@ var wordsCount = [
   'matter'
 ];
 
-function howManyTimes (array, word) {
-  if(array.includes(word)) {
-    console.log("The array contains " + word.toUpperCase());
-  } else {
-    console.log("The array dont contain " + word.toUpperCase())
+function howManyTimes (array, string) {
+  let wordcounter = 0;
+
+  for (let j = 0; j < array.length; j++){
+    if(string === true){
+      wordcounter = wordcounter++;
+      console.log(wordcounter)
+    } else{
+      wordcounter = 0;
+    }
   }
 }
 
-howManyTimes(wordsCount, "machine");
+howManyTimes(wordsCount, "matter");
 
 // Bonus Quest
 
